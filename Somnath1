@@ -1,0 +1,66 @@
+import turtle
+
+def binary_search(array, target):
+    low = 0
+    high = len(array) - 1
+
+    while low <= high:
+        mid = (low + high) // 2
+
+        if array[mid] == target:
+            return mid
+        elif array[mid] < target:
+            low = mid + 1
+        else:
+            high = mid - 1
+
+    return -1
+
+def draw_binary_search(array, target):
+    turtle.penup()
+    turtle.goto(0, 0)
+    turtle.pendown()
+
+    turtle.write("Binary Search")
+    turtle.forward(100)
+
+    for i in range(len(array)):
+        turtle.penup()
+        turtle.goto(i * 10, array[i] * 10)
+        turtle.pendown()
+
+        turtle.write(f"{array[i]}")
+
+    turtle.penup()
+    turtle.goto(0, array[target] * 10)
+    turtle.pendown()
+
+    turtle.write(f"Target: {target}")
+
+    # Perform binary search
+    low = 0
+    high = len(array) - 1
+
+    while low <= high:
+        mid = (low + high) // 2
+
+        turtle.penup()
+        turtle.goto(mid * 10, array[mid] * 10)
+        turtle.pendown()
+
+        turtle.write(f"Mid: {array[mid]}")
+
+        if array[mid] == target:
+            turtle.write(f"Found! at index {mid}")
+            break
+        elif array[mid] < target:
+            low = mid + 1
+        else:
+            high = mid - 1
+
+    turtle.hideturtle()
+
+array = [1, 3, 5, 7, 9]
+target = 7
+
+draw_binary_search(array, target)
