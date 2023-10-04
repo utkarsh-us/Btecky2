@@ -30,3 +30,5 @@ This code implements a chatbot using the Llama 2 language model, powered by the 
 
 <img src="template.png">
 
+⚠️Use Your own API Key from Replicate⚠️
+
