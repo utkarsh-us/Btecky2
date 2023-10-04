@@ -1,0 +1,164 @@
+@font-face {
+	font-family: 'codropsicons';
+	font-weight: normal;
+	font-style: normal;
+	src: url('../fonts/codropsicons/codropsicons.eot');
+	src: url('../fonts/codropsicons/codropsicons.eot?#iefix') format('embedded-opentype'), url('../fonts/codropsicons/codropsicons.woff') format('woff'), url('../fonts/codropsicons/codropsicons.ttf') format('truetype'), url('../fonts/codropsicons/codropsicons.svg#codropsicons') format('svg');
+}
+
+@font-face {
+	font-family: 'knarfart';
+	font-weight: normal;
+	font-style: normal;
+	src: url('../fonts/knarfart/knarfart-webfont.eot');
+	src: url('../fonts/knarfart/knarfart-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/knarfart/knarfart-webfont.woff2') format('woff2'), url('../fonts/knarfart/knarfart-webfont.woff') format('woff'), url('../fonts/knarfart/knarfart-webfont.ttf') format('truetype'), url('../fonts/knarfart/knarfart-webfont.svg#knarfart') format('svg');
+}
+
+@font-face {
+	font-family: 'morse_coderegular';
+	font-weight: normal;
+	font-style: normal;
+	src: url('../fonts/morse/m0rse-webfont.eot');
+	src: url('../fonts/morse/m0rse-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/morse/m0rse-webfont.woff2') format('woff2'), url('../fonts/morse/m0rse-webfont.woff') format('woff'), url('../fonts/morse/m0rse-webfont.ttf') format('truetype'), url('../fonts/morse/m0rse-webfont.svg#morse_coderegular') format('svg');
+}
+
+*,
+*::after,
+*::before {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Avenir Next', Avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	counter-reset: gridcounter;
+	color: #3e3d47;
+	background: #1e1d23;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+a {
+	text-decoration: none;
+	color: #aaa;
+	outline: none;
+}
+
+a:hover,
+a:focus {
+	color: #fff;
+	outline: none;
+}
+
+.hidden {
+	position: absolute;
+	left: -100vw;
+	width: 0;
+	height: 0;
+}
+
+.container {
+	position: relative;
+	overflow: hidden;
+}
+
+.codrops-header {
+	position: relative;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+	overflow: hidden;
+	padding: 3.5em 1em 1em;
+	text-align: center;
+	text-align: center;
+}
+
+.demo-1 .codrops-header {
+	height: calc(100vh - 40px);
+	margin: 20px 20px 20px;
+	padding: 2em 1em 4em;
+	background: url(../img/mouse.svg) no-repeat left 50% bottom 40px;
+}
+
+.deco {
+	font-family: 'knarfart', cursive;
+	font-size: 90vw;
+	line-height: 110vh;
+	position: absolute;
+	z-index: -1;
+	top: 0;
+	left: 0;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+	color: rgba(0, 0, 0, 0.06);
+	background: #23222a;
+}
+
+.codrops-header h1 {
+	font-size: 2.35em;
+	font-weight: 400;
+	line-height: 1;
+	margin: 0;
+	padding: 0.85em 0 0;
+	letter-spacing: 0.5em;
+	word-spacing: -0.3em;
+	text-transform: uppercase;
+	color: #e65454;
+}
+
+.demo-1 .codrops-header h1 {
+	font-size: 3.35em;
+}
+
+.codrops-header p {
+	font-weight: 500;
+	margin: 2em 0 0;
+}
+
+.info {
+	color: #e65454;
+}
+
+
+/* Top Navigation Style */
+
+.codrops-links {
+	line-height: 1;
+	position: relative;
+	display: inline-block;
+	text-align: center;
+	white-space: nowrap;
+}
+
+.codrops-links::after,
+.codrops-demos a:not(:last-child)::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 50%;
+	width: 1px;
+	height: 100%;
+	background: rgba(255, 255, 255, 0.1);
+	-webkit-transform: rotate3d(0, 0, 1, 22.5deg);
+	transform: rotate3d(0, 0, 1, 22.5deg);
+}
